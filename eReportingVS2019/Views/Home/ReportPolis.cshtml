@@ -1,0 +1,412 @@
+﻿@{
+    ViewData["Title"] = "Report Polis Page";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-sm-12">
+
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card card-primary card-outline card-tabs">
+                        <div class="card-header p-0 pt-1 border-bottom-0">
+                            <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="peribadi-tab" data-toggle="pill" href="#custom-tabs-three-home" role="tab" aria-controls="custom-tabs-three-home" aria-selected="true">Butiran Peribadi</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="kejadian-tab" data-toggle="pill" href="#custom-tabs-three-profile" role="tab" aria-controls="custom-tabs-three-profile" aria-selected="false">Butiran Kejadian</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="keterangan-tab" data-toggle="pill" href="#custom-tabs-three-messages" role="tab" aria-controls="custom-tabs-three-messages" aria-selected="false">Keterangan Kejadian</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="perakuan-tab" data-toggle="pill" href="#custom-tabs-three-settings" role="tab" aria-controls="custom-tabs-three-settings" aria-selected="false">Perakuan</a>
+                                </li>
+                                @*<li class="nav-item">
+                                    <a class="nav-link" id="report-tab" data-toggle="pill" href="#custom-tabs-three-report" role="tab" aria-controls="custom-tabs-three-report" aria-selected="false">Cetak Report</a>
+                                </li>*@
+                            </ul>
+                        </div>
+                        <div class="card-body">
+                            <div class="tab-content" id="custom-tabs-three-tabContent">
+                                <div class="tab-pane fade show active" id="custom-tabs-three-home" role="tabpanel" aria-labelledby="peribadi-tab">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+
+                                                    <div class="form-group">
+                                                        <label class="required">New Identity Card No</label>
+                                                        <input type="text" id="txtRUserid" class="form-control" readonly>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Name of Complainant</label>
+                                                        <input type="text" id="txtRUsername" class="form-control" readonly>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Date Of Birth</label>
+                                                        <input type="text" id="inputName" class="form-control" readonly>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Gender</label>
+                                                        <input type="text" id="txtRGender" class="form-control" readonly>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Nationality</label>
+                                                        <select id="inputStatus" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option value="malaysian">Malaysian</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Race</label>
+                                                        <select id="inputStatus" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option>Chinese</option>
+                                                            <option>Indian</option>
+                                                            <option>Malay</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Religion</label>
+                                                        <select id="inputStatus" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option>Buddhism</option>
+                                                            <option>Christianity</option>
+                                                            <option>Islam</option>
+                                                            <option>Hinduism</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Handphone No.</label>
+                                                        <input type="text" id="txtRTel" class="form-control">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.col-md-6 -->
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+
+                                                    <div class="form-group">
+                                                        <label>Home Telephone No.</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Office Telephone</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Address</label>
+                                                        <textarea id="txtRAddress" class="form-control" rows="4"></textarea>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Postcode</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">State</label>
+                                                        <select id="inputStatus" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option value="Johor">Johor</option>
+                                                            <option value="Kedah">Kedah</option>
+                                                            <option value="Kelantan">Kelantan</option>
+                                                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                                            <option value="Labuan">Labuan</option>
+                                                            <option value="Melaka">Melaka</option>
+                                                            <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                                            <option value="Pahang">Pahang</option>
+                                                            <option value="Penang">Penang</option>
+                                                            <option value="Perak">Perak</option>
+                                                            <option value="Perlis">Perlis</option>
+                                                            <option value="Putrajaya">Putrajaya</option>
+                                                            <option value="Sabah">Sabah</option>
+                                                            <option value="Sarawak">Sarawak</option>
+                                                            <option value="Selangor">Selangor</option>
+                                                            <option value="Terengganu">Terengganu</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">District</label>
+                                                        <select id="inputStatus" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option value="District">District</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <input type="email" id="inputName" class="form-control">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- /.col-md-6 -->
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="custom-tabs-three-profile" role="tabpanel" aria-labelledby="kejadian-tab">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127482.68825018292!2d101.60458722960004!3d3.1385026606574553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc362abd08e7d3%3A0x232e1ff540d86c99!2sKuala%20Lumpur%2C%20Federal%20Territory%20of%20Kuala%20Lumpur!5e0!3m2!1sen!2smy!4v1691482916272!5m2!1sen!2smy"
+                                            width="1050"
+                                            height="450"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label class="required">Tempat Kejadian</label>
+                                                        <select id="cbPlace" class="form-control custom-select">
+                                                            <option selected disabled>Please Select...</option>
+                                                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">No.Lot/Bilik/Pejabat/Rumah/Bagunan</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Nama Jalan</label>
+                                                        <input type="text" id="txtJalan" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Nama Taman/Tempat</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Poskod</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Bandar</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Negeri</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="card">
+                                                <div class="card-body">
+                                                    <div class="form-group">
+                                                        <label class="required">Tarikh dan Masa</label>
+                                                        <div class="input-group">
+                                                            <div class="input-group-prepend">
+                                                                <span class="input-group-text"><i class="far fa-clock"></i></span>
+                                                            </div>
+                                                            <input type="text" class="form-control float-right" id="reservationtime">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Balai Report Polis Dihantar</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Kontijen</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Daerah</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label class="required">Balai</label>
+                                                        <input type="text" id="inputName" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="tab-pane fade" id="custom-tabs-three-messages" role="tabpanel" aria-labelledby="keterangan-tab">
+                                    <div class="row">
+                                        <table class="table table-borderless">
+                                            <tbody>
+                                                <tr>
+                                                    <td width="20%"><strong>Tarikh:</strong></td>
+                                                    <td width="80%" id="lblDate">10/11/2023 Hingga 10/11/2023</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="20%"><strong>Masa:</strong></td>
+                                                    <td width="80%" id="lblTime">9:00 AM Hingga 11:00 AM</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="20%"><strong>Tempat:</strong></td>
+                                                    <td width="80%" id="lblPlace">Kuala Lumpur</td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="20%"><strong>Alamat:</strong></td>
+                                                    <td width="80%" id="lblAlamat">Jalan Kampung</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" class="btn btn-success">Daftar Peralatan Akibat Bencana Alam</button>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="required">Pilihan Jenis Bencana Alam</label>
+                                        <select id="inputStatus" class="form-control custom-select">
+                                            <option selected disabled>Sila Pilih...</option>
+                                            <option value="Banjir">Banjir</option>
+                                            <option value="Kebakaran Hutan">Kebakaran Hutan</option>
+                                            <option value="Gempa Bumi">Gempa Bumi</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="required">Bencana Alam</label>
+                                        <textarea id="inputDescription" class="form-control" rows="10"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="custom-tabs-three-settings" role="tabpanel" aria-labelledby="perakuan-tab">
+
+                                    <div class="row">
+                                        Deraf Report Polis
+                                    </div>
+
+                                    <div class="row">
+                                        <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                            <strong>
+                                                Butir Peribadi Pengadu
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td width="20%"><strong>Name:</strong></td>
+                                                <td width="80%" id="lblName"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>No. KP (Baru):</strong></td>
+                                                <td width="80%" id="lblKP"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>Jantina:</strong></td>
+                                                <td width="80%" id="lblGender"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>Alamat tempat tinggal:</strong></td>
+                                                <td width="80%" id="lblAlamatTempat"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>No. telefon:</strong></td>
+                                                <td width="80%" id="lblTelNo"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="row">
+                                        <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                                            <strong>
+                                                Pengadu Menyatakan
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td width="20%"><strong>Tarikh:</strong></td>
+                                                <td width="80%" id="lblDate1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>Masa:</strong></td>
+                                                <td width="80%" id="lblTime1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>Tempat:</strong></td>
+                                                <td width="80%" id="lblPlace1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td width="20%"><strong>Alamat:</strong></td>
+                                                <td width="80%" id="lblAlamat1"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                        <label class="form-check-label" for="exampleCheck2" style="color: red"><strong>Saya mengaku laporan ini adalah kejadian.</strong></label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group">
+                                            <ul>
+                                                <li><strong>Seksyen 182, Kanun Keseksaan (Akta 574). Memberi maklumat palsu.</strong> Membawa hukuman maksimum 6 bulan penjara, atau denda yang boleh sampai dua ribu ringgit (RM2,000.00), atau kedua-duanya sekali.</li>
+                                                <li><strong>Seksyen 233, Akta Komunikasi dan Multimedia 1998, Menggunakan kemudahan rangkaian untuk menghantar apa-apa komen, permintaan, cadangan atau kominikasi yang palsu.</strong> Membawa hukuman maksimum 1 tahun penjara, atau denda yang boleh sampai lima puluh ribu ringgit (RM50,000.00), atau kedua-duanya sekali dan boleh didenda selanjutnya satu ribu ringgit bagi setiap hari kesalahan itu diteruskan selepas disabitkan kesalahan.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                @*<div class="tab-pane fade" id="custom-tabs-three-report" role="tabpanel" aria-labelledby="report-tab">
+                                        Report
+                                    </div>*@
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <a id="btnPrintRpt" type="button" class="btn btn-primary themeColor nav-link text-right" href="#">Cetak Report</a>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+
+
+
+@section Scripts{
+    <script src="~/js/reportPolis.js"></script>
+}

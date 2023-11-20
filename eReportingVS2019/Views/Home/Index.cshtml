@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+@{
+    ViewData["Title"] = "Login Page";
+}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+<link rel="stylesheet" href="~/dist/css/adminlte.min.css">
+<link rel="stylesheet" href="~/css/login.css">
+
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 px-0 d-none d-sm-block">
+                <img class="d-block login-img w-100" src="~/dist/img/login.png" alt="loginpage">
+            </div>
+
+            <div class="col-sm-6 login-section-wrapper" style="padding: 100px;">
+                <div class="brand-wrapper">
+                    <img src="~/dist/img/logo.png" alt="logo" class="logo img-left" style="width: 100px; height: 100px">
+                    <h3>&nbsp&nbspe-Reporting</h3>
+                </div>
+
+                <br />
+
+                <div class="col-sm-10">
+                    <section id="loginForm">
+                        <form method="post" id="formLogin">
+
+                            <div class="form-group">
+                                <label>No. Kad Pengenalan Baru</label>
+                                <input type="text" id="txtLoginUser" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Katalaluan</label>
+                                <input type="password" id="inputName" class="form-control">
+                                <p class="small text-right"><a class="text-muted" href="#">Lupa Katalaluan</a></p>
+                            </div>
+
+                            <div class="form-group">
+                                @*<input id="btnLogin" type="submit" class="btn btn-primary themeColor" value="Login" asp-area="" asp-controller="Home" asp-action="ReportPolis" />*@
+                                @*<input id="btnLogin" type="submit" class="btn btn-primary themeColor" value="Login" />*@
+                                <a id="btnLogin" type="button" class="btn btn-primary themeColor nav-link" href="#">Login</a>
+                                <p class="text-center"><a class="nav-link" asp-area="" asp-controller="Home" asp-action="Register">Daftar Pengguna</a></p>
+                            </div>
+                        </form>
+
+                    </section>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+<script src="~/plugins/jquery/jquery.min.js"></script>
+<script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/login.js"></script>

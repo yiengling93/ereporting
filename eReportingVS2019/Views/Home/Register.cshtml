@@ -1,0 +1,341 @@
+﻿@{
+    ViewData["Title"] = "Register Page";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+        <div class="container">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Register User</h1>
+                </div><!-- /.col -->
+                <div class="col-sm-6">
+                </div><!-- /.col -->
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label class="required">New Identity Card No</label>
+                                <input type="text" id="txtUserid" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Name of Complainant</label>
+                                <input type="text" id="txtUsername" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Password</label>
+                                <input type="password" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Retype Password</label>
+                                <input type="password" id="inputName" class="form-control">
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="required">Date Of Birth</label>
+                                <div class="input-group date" id="reservationdate" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" />
+                                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Age</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Gender</label>
+                                <select id="cbGender" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Nationality</label>
+                                <select id="inputStatus" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option value="malaysian">Malaysian</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Race</label>
+                                <select id="inputStatus" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option>Chinese</option>
+                                    <option>Indian</option>
+                                    <option>Malay</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Religion</label>
+                                <select id="inputStatus" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option>Buddhism</option>
+                                    <option>Christianity</option>
+                                    <option>Islam</option>
+                                    <option>Hinduism</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Handphone No.</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Retype Handphone No.</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <!-- /.col-md-6 -->
+                <div class="col-lg-6">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="form-group">
+                                <label>Home Telephone No.</label>
+                                <input type="text" id="txtTelno" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Office Telephone</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Address</label>
+                                <textarea id="txtAddress" class="form-control" rows="4"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">Postcode</label>
+                                <input type="text" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">State</label>
+                                <select id="inputStatus" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option value="Johor">Johor</option>
+                                    <option value="Kedah">Kedah</option>
+                                    <option value="Kelantan">Kelantan</option>
+                                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                                    <option value="Labuan">Labuan</option>
+                                    <option value="Melaka">Melaka</option>
+                                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                                    <option value="Pahang">Pahang</option>
+                                    <option value="Penang">Penang</option>
+                                    <option value="Perak">Perak</option>
+                                    <option value="Perlis">Perlis</option>
+                                    <option value="Putrajaya">Putrajaya</option>
+                                    <option value="Sabah">Sabah</option>
+                                    <option value="Sarawak">Sarawak</option>
+                                    <option value="Selangor">Selangor</option>
+                                    <option value="Terengganu">Terengganu</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="required">District</label>
+                                <select id="inputStatus" class="form-control custom-select">
+                                    <option selected disabled>Please Select...</option>
+                                    <option value="District">District</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label>Retype Email</label>
+                                <input type="email" id="inputName" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label style="color: red">Note: Complainants are encouraged to fill the Email.</label>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.col-md-6 -->
+            </div>
+            <!-- /.row -->
+
+            <div class="text-right">
+                <button id="btnAdd" type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitTnc">
+                    Submit
+                </button>
+            </div>
+        </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+</div>
+
+<!-- Modal for T&C -->
+<div id="submitTnc" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <h3 id="modalText" style="color: red">Peringatan</h3>
+
+                    <div class="form-group">
+                        <label><strong>Anda dinasihatkan menghubungi Pusat Kawalan Malaysia di talian 03-226603333 / 03-2031 9999, 999 atau Balai Polis berhampiran.</strong></label>
+                        <label><strong>Bagi Kes-kes Kecemasan seperti berikut:</strong></label>
+                        <ol type="1">
+                            <li>Kes yang MEMERLUKAN tindakan segera Polis</li>
+                            <li>Kes yang sedang berlaku</li>
+                            <li>Saspek masih berada di tempat kejadian atau berhampiran</li>
+                            <li>Nyawa seseorang sedang terancam</li>
+                            <li>Kes orang hilang</li>
+                            <li>Bukti fizikal (termasuk darah, cap jari atau apa-apa barang) yang tertinggalkan di tempat kejadian jenayah</li>
+                        </ol>
+                    </div>
+
+                    <h3 id="modalText" style="color: red">Amaran</h3>
+                    <div class="form-group">
+                        <ul>
+                            <li><strong>Seksyen 182, Kanun Keseksaan (Akta 574). Memberi maklumat palsu.</strong> Membawa hukuman maksimum 6 bulan penjara, atau denda yang boleh sampai dua ribu ringgit (RM2,000.00), atau kedua-duanya sekali.</li>
+                            <li><strong>Seksyen 233, Akta Komunikasi dan Multimedia 1998, Menggunakan kemudahan rangkaian untuk menghantar apa-apa komen, permintaan, cadangan atau kominikasi yang palsu.</strong> Membawa hukuman maksimum 1 tahun penjara, atau denda yang boleh sampai lima puluh ribu ringgit (RM50,000.00), atau kedua-duanya sekali dan boleh didenda selanjutnya satu ribu ringgit bagi setiap hari kesalahan itu diteruskan selepas disabitkan kesalahan.</li>
+                        </ul>
+                    </div>
+
+                    <hr />
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                        <label class="form-check-label" for="exampleCheck2"><strong>Saya berumur 18 tahun dan ke atas.</strong></label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                        <label class="form-check-label" for="exampleCheck2"><strong>Saya mengesahkan bahawa laporan polis yang saya buat ini tidak melibat sebarang unsur jenayah.</strong></label>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="btnConfirmSubmit" type="button" class="btn btn-primary" data-toggle="modal" data-target="#submitQnA">Continue</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Q&A -->
+<div id="submitQnA" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <h4 id="modalText">Please answer the following question before lodging a police report :</h4>
+
+                    <div class="form-group">
+                        <label>1. How do you suspect the incident happended?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1">
+                            <label class="form-check-label">Dropped</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1">
+                            <label class="form-check-label">Missplaced</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1">
+                            <label class="form-check-label">Disappeared</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1">
+                            <label class="form-check-label">Cancellation Of Maid Work Permit</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio1">
+                            <label class="form-check-label">Natural Disaster</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>2. How many times the incident happened?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio2">
+                            <label class="form-check-label">1st time</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio2">
+                            <label class="form-check-label">2nd time</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio2">
+                            <label class="form-check-label">More than twice</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>3. What is the purpose of the report is made?</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio3">
+                            <label class="form-check-label">Replacement</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio3">
+                            <label class="form-check-label">Demand</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio3">
+                            <label class="form-check-label">Court</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio3">
+                            <label class="form-check-label">Personal</label>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        @*<a id="btnQnASubmit" type="button" class="btn btn-primary" asp-area="" asp-controller="Home" asp-action="ReportPolis">OK</a>*@
+                        <a id="btnQnASubmit" type="button" class="btn btn-primary" href="#">OK</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/site.js"></script>
+}
